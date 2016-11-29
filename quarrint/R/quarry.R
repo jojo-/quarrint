@@ -284,7 +284,8 @@ print.quarry <- function(x, verbose = FALSE, ...) {
 
 }
 
-as.data.frame.quarry <- function(x, attr = "all", ...) {
+as.data.frame.quarry <- function(x, row.names = NULL, optional = NULL,
+                                 attr = "all", ...) {
   # Coerce a quarry object to a data frame.
   #
   # Author: J. Barthelemy
@@ -292,6 +293,8 @@ as.data.frame.quarry <- function(x, attr = "all", ...) {
   # Args:
   #   x: A quarry object.
   #   attr: The attributes to be retained in the data frame.
+  #   row.names: Not used.
+  #   optional: Not used.
   #   ...: Further arguments passed to or from other methods.
   #
   # Returns: A dataframe representing the input quarry object.
@@ -493,7 +496,7 @@ compute.ann.default <- function(x, ...) {
 
 }
 
-compute.ann.quarry <- function(x, ann = ann.interactions, rep = 1, ...) {
+compute.ann.quarry <- function(x, ann = NULL, rep = 1, ...) {
   # Compute the neural network-based interaction index.
   #
   # Given an object of type quarry, a neural network computes the interaction
@@ -518,7 +521,7 @@ compute.ann.quarry <- function(x, ann = ann.interactions, rep = 1, ...) {
   # Args:
   #   x: A quarry object.
   #   ann: The neural network used to estimate the interaction index. By default
-  #        it uses a neural network provided by the package.
+  #        (if set to NULL) it uses a neural network provided by the package.
   #   rep: The repetition of ann to be used.
   #   ...: Further arguments passed to or from other methods. For instance, see
   #        the documentation of "compute" in the "neuralnet" package.
@@ -530,7 +533,11 @@ compute.ann.quarry <- function(x, ann = ann.interactions, rep = 1, ...) {
   #   very.high: The output of the ann for a very high interaciton level.
   #   idx: a string with the level of interaction.
 
-
+  # Importing the default neural network
+  if (is.null(ann) == TRUE){
+    ann <- ann.interactions
+  }
+  
   # Coercing the quarry to a data frame, keeping only the necessary variables
   quarry.df <- as.data.frame(x, attr = ann$model.list$variables, ...)
   ann.out <- compute(ann, quarry.df, rep = rep)$net.result
@@ -648,8 +655,8 @@ compute.interaction.quarry <- function(x, method = "all",
 
 }
 
-train.ann <- function(var = c("H","Z","G","C","T","L"), data = quarries,
-                      hidden = 7, rep = 1, ...) {
+train.ann <- function(var = c("H","Z","G","C","T","L"), 
+                      data = quarrint::quarries, hidden = 7, rep = 1, ...) {
   # Training an artificial neural network for interaction prediction.
   # The neural network predict whether the level of interaction is low, medium
   # high or very high. The user can specify:
