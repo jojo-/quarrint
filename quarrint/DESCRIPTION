@@ -12,8 +12,9 @@ Authors@R: c(
     person("Vincent", "Hallet", role = "aut"),
     person("Marie", "Moriame", role = "aut"),
     person("Annick", "Sartenaer", role = "aut"))
-Author: Johan Barthemy [aut, cre], Timoteo Carletti [aut], Louise Collier [aut],
-    Vincent Hallet [aut], Marie Moriame [aut], Annick Sartenaer [aut]
+Author: Johan Barthelemy [aut, cre], Timoteo Carletti [aut], 
+    Louise Collier [aut], Vincent Hallet [aut], Marie Moriame [aut], 
+    Annick Sartenaer [aut]
 Maintainer: Johan Barthelemy <johan@uow.edu.au>
 Description: An implementation of two interaction indices between extractive
     activity and groundwater resources based on hazard and vulnerability
