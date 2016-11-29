@@ -10,12 +10,19 @@ to be stored in the data frame can be specified (default: keeping every
 attributes).
 }
 \usage{
-\method{as.data.frame}{quarry}(x, attr = "all", ...)
+\method{as.data.frame}{quarry}(x, row.names = NULL, optional = NULL, 
+              attr = "all", ...)
 }
 
 \arguments{
   \item{x}{
     An object of type \code{quarry}.
+}
+  \item{row.names}{
+    Not used.
+}
+  \item{optional}{
+    Not used.
 }
   \item{attr}{
     A vector listing the dummy variables to be retained in the data frame.

@@ -85,7 +85,7 @@ Maintainer: Johan Barthelemy \email{johan@uow.edu.au}.
   choice models and artificial neural networks
   \emph{Environmental Earth Sciences} (in press)
 
-  Collier, L., Barthelemy, J., Carletti, T., Moriamé, M., Sartenaer, A.,
+  Collier, L., Barthelemy, J., Carletti, T., Moriame, M., Sartenaer, A.,
   Hallet, H. (2015)
   Calculation of an Interaction Index between the Extractive Activity and
   Groundwater Resources

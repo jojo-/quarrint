@@ -27,7 +27,7 @@ The possible values for each attribue are described in the Argument Section.
 }
 \usage{
 quarry(geological.context = 1, hydrogeological.context = 1,
-       piezometric.context = 1, quarry.position = 0, production.catchment = 1,
+       piezometric.context = 1, quarry.position = 1, production.catchment = 1,
        quality.catchment = 1, ...)
 
 \method{print}{quarry}(x, verbose = FALSE, ...)
@@ -117,7 +117,10 @@ quarry(geological.context = 1, hydrogeological.context = 1,
     the values of the variables must be in the range \code{[l, u]} instead of
     \code{[1, 4]}, then it can be achieved using \code{low.bound = l} and
     \code{up.bound = u} as the function relies on
-    \code{\link[quarry:int.in.range]{int.in.range}}.
+    \code{\link[quarrint:int.in.range]{int.in.range}}.
+}
+  \item{x}{
+    An object of type \code{quarry}.
 }
 }
 \value{
@@ -167,7 +170,7 @@ A quarry object consisting of a list whose elements are
   choice models and artificial neural networks
   \emph{Environmental Earth Sciences} (sumbitted)
 
-  Collier, L., Barthelemy, J., Carletti, T., Moriamé, M., Sartenaer, A.,
+  Collier, L., Barthelemy, J., Carletti, T., Moriame, M., Sartenaer, A.,
   Hallet, V. (2015)
   Calculation of an Interaction Index between the Extractive Activity and
   Groundwater Resources
@@ -182,16 +185,16 @@ Maintainer: Johan Barthelemy \email{johan@uow.edu.au}.
 By default, the modalities are integer in [1,4], but that can be changed
 to be an integer in any given range by passing in \code{...} the arguments
 \code{low.bound} and \code{up.bound} of the function
-\code{\link[quarry:int.in.range]{int.in.range}}.
+\code{\link[quarrint:int.in.range]{int.in.range}}.
 }
 \seealso{
-\code{\link[quarry:int.in.range]{int.in.range}} to a use custom range for the
+\code{\link[quarrint:int.in.range]{int.in.range}} to a use custom range for the
 values of the paramters.
 
 \code{\link[base:print]{print}} to print a \code{quarry} object.
 
-\code{\link[quarry:as.data.frame]{as.data.frame}} to coerce a quarry to a
-data frame.
+\code{\link[quarrint:as.data.frame.quarry]{as.data.frame}} to coerce a quarry to
+a data frame.
 
 \code{\link[quarrint:compute.interaction]{compute.interaction}} to predict the
 interaction between between the quarry and the groundwater.

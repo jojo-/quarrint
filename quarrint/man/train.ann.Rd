@@ -19,8 +19,8 @@ The user can specify:
 }
 }
 \usage{
-train.ann(var = c("H", "Z", "G", "C", "T", "L"), data = quarries, hidden = 7,
-          rep = 1, ...)
+train.ann(var = c("H", "Z", "G", "C", "T", "L"), data = quarrint::quarries, 
+          hidden = 7, rep = 1, ...)
 }
 \arguments{
   \item{var}{
@@ -68,7 +68,7 @@ A list whose elements are:
   choice models and artificial neural networks
   \emph{Environmental Earth Sciences} (in press)
 
-  Collier, L., Barthelemy, J., Carletti, T., Moriamé, M., Sartenaer, A.,
+  Collier, L., Barthelemy, J., Carletti, T., Moriame, M., Sartenaer, A.,
   Hallet, V. (2015)
   Calculation of an Interaction Index between the Extractive Activity and
   Groundwater Resources
@@ -100,6 +100,7 @@ network.
 The data frame \code{\link[quarrint:quarries]{quarries}}.
 }
 \examples{
+\dontrun{
 # training a neural network using the attribues H and T as predictors,
 # with 2 hidden layers of 2 nodes each and computing 2 replications
 r.ann <- train.ann(var = c("H", "T", "L", "Z"), hidden = c(2, 2), rep = 2)
@@ -109,6 +110,7 @@ q <- quarry(geological.context = 2, hydrogeological.context = 4,
             piezometric.context = 1, quarry.position = 4,
             production.catchment = 4, quality.catchment = 3)
 compute.interaction(q, method="ann", ann = r.ann$ann)
+}
 }
 \keyword{neural}
 

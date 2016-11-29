@@ -2,6 +2,7 @@
 \alias{compute.ann}
 \alias{compute.ann.default}
 \alias{compute.ann.quarry}
+\alias{ann.interactions}
 \title{
 Neural Network-based Interaction Index for a Quarry
 }
@@ -10,16 +11,16 @@ Given an object of type quarry, a neural network computes the interaction index
 (low, medium, high or very high).
 }
 \usage{
-\method{compute.ann}{quarry}(x, ann = ann.interactions, rep = 1, ...)
+\method{compute.ann}{quarry}(x, ann = NULL, rep = 1, ...)
 }
 \arguments{
   \item{x}{
     A quarry object.
 }
   \item{ann}{
-    The neural network used to estimate the interaction index. By default
-    it uses a neural network provided by the package. The neural network is
-    an object of class \code{nn}.
+    The neural network used to estimate the interaction index. By default, if
+    set to \code{NULL}, it uses a neural network provided by the package. The 
+    neural network is an object of class \code{nn}.
 }
   \item{rep}{
     The repetition of ann to be used.
@@ -56,7 +57,7 @@ or \code{very high}).}
   choice models and artificial neural networks
   \emph{Environmental Earth Sciences} (in press)
 
-  Collier, L., Barthelemy, J., Carletti, T., Moriamé, M., Sartenaer, A.,
+  Collier, L., Barthelemy, J., Carletti, T., Moriame, M., Sartenaer, A.,
   Hallet, H. (2015)
   Calculation of an Interaction Index between the Extractive Activity and
   Groundwater Resources

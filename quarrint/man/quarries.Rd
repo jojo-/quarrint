@@ -229,7 +229,7 @@ Each of those parameters is classified into 4 modalities.
   choice models and artificial neural networks
   \emph{Environmental Earth Sciences} (in press)
 
-  Collier, L., Barthelemy, J., Carletti, T., Moriamé, M., Sartenaer, A.,
+  Collier, L., Barthelemy, J., Carletti, T., Moriame, M., Sartenaer, A.,
   Hallet, V. (2015)
   Calculation of an Interaction Index between the Extractive Activity and
   Groundwater Resources
